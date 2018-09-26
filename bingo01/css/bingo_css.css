@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+body {
+	font-size: 14px;
+	font-family: sans-serif;
+	background-color: #F6E3CE;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 630px;
+	text-align: center;
+}
+
+/* シャッフル中当選番号テキスト */
+.textShuffle {
+	text-align: center;
+	font-weight: bold; 
+	font-size: 500%; 
+	width: 70%;
+	margin: 0 auto;
+	padding:10px 10px;
+  	background-color: #FFFFFF;
+  border-radius: 10px;
+}
+/* 待機中当選番号テキスト */
+.textWaiting {
+	text-align: center;
+	font-weight: bold; 
+	font-size: 500%; 
+	width: 70%;
+	margin: 0 auto;
+	padding:10px 10px;
+  	color: #FFFFFF;
+  	background-color: #FF0000;
+  border-radius: 10px;
+}
+
+/* 当選番号ログ表示エリア */
+.numLog {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+}
+
+.numLog li {
+	font-size: 30px; 
+	font-weight: bold; 
+	border: solid 2px #FE9A2E;
+	display: flex;
+	justify-content: center;
+	height: 42px;
+	margin: 5px;
+	width: 42px;
+	border-radius: 21px;
+	background-color: #F2F5A9;
+}
+.BingoBallNotSelected {
+	font-size: 22px; 
+	font-weight: normal ; 
+	color: #cccccc;
+	border: solid 1px #cccccc;
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	margin: 5px;
+	width: 30px;
+	border-radius: 15px;
+	background-color: #FFFFFF;
+}
+.BingoBallSelected {
+	font-size: 22px; 
+	font-weight: bold; 
+	border: solid 2px #FE9A2E;
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	margin: 4px;
+	width: 30px;
+	border-radius: 15px;
+	background-color: #F2F5A9;
+}
+
+
+/* ボタン */
+.button1 {
+	font-weight: bold; 
+	font-family:sans-serif;
+	font-size: 200%; 
+	padding:10px 20px;
+  margin: 5px;
+}
+
+/* ロゴ */
+.logo {
+	width: 200px; 
+}
+/* ロゴの点滅 */
+.logo_blink {
+	width: 200px; 
+	-webkit-animation:blink 0.8s ease-in-out infinite alternate;
+	-moz-animation:blink 0.8s ease-in-out infinite alternate;
+	animation:blink 0.8s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink {
+    100% {opacity:0;}
+    0% {opacity:1;}
+}
+@-moz-keyframes blink {
+    100% {opacity:0;}
+    0% {opacity:1;}
+}
+@keyframes blink {
+    100% {opacity:0;}
+    0% {opacity:1;}
+}
+
+

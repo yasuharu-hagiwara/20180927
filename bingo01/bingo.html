@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+    	<!-- タイトル  -->
+		<title>シンプルでまあまあ使いやすいビンゴ。</title>
+
+		<!-- Javascriptとcssの呼び出し  -->
+		<script src="js/bingo_js.js"></script>
+		<link rel="stylesheet" href="css/bingo_css.css">    
+	</head>
+
+	<body>
+		<div>
+
+			<!-- ロゴ  -->
+			<img  class="logo" id="logo" src="images/bingo.png" width="450">
+
+			<!-- 見出し  -->
+			<h1>シンプルでまあまあ使いやすいビンゴ。</h1>
+			
+			<!-- 当選番号テキスト  -->
+			<div class="textWaiting" id="textWinArea">
+				<span id="txtWinNo"></span>
+			</div>
+
+			<!-- 余白  -->
+			<div>　</div>
+
+			<div>
+				<!-- 余白  -->
+				<p></p>
+				<!-- 抽選ボタン  -->
+				<button type="button" class="button1"  id="btnStart" onClick="clkStartStop()"></button>
+				<!-- 表示切替ボタン  -->
+				<button type="button" class="button1"  id="btnViewChg" onClick="clkViewChg()"></button>
+			</div>
+			<!-- 余白  -->
+			<div>　</div>
+			<!-- 全番号モード  -->
+			<div id=display1>
+				<ul id="numLog_dsp1" class="numLog" ></ul>
+			</div>
+			<!-- 当選番号履歴モード  -->
+			<div id=display2>
+				<ul id="numLog_dsp2" class="numLog"></ul>
+			</div>
+			
+		</div>
+	</body>
+</html>
