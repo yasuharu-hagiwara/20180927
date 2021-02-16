@@ -19,6 +19,13 @@ var txtWinNo;
 var numLog_dsp1;
 var numLog_dsp2;
 var btnStart;
+var soundEffect;
+var sound1_1;
+var sound1_2;
+var sound2_1;
+var sound2_2;
+var seMenu;
+
 /* 10ミリ秒ごとの繰り返し処理のID */
 var timer;
 
@@ -32,7 +39,13 @@ window.onload = function () {
 	txtWinNo  = document.getElementById("txtWinNo");
 	numLog_dsp1 = document.getElementById("numLog_dsp1");
 	numLog_dsp2 = document.getElementById("numLog_dsp2");
-	
+	soundEffect = document.getElementById( "soundEffect" ) ;	
+	sound1_1 = document.getElementById( "sound1_1" ) ;	
+	sound1_2 = document.getElementById( "sound1_2" ) ;	
+	sound2_1 = document.getElementById( "sound2_1" ) ;	
+	sound2_2 = document.getElementById( "sound2_2" ) ;	
+	seMenu = document.getElementsByName( "se1" ) ;
+
 	/* 変数初期化 */
 	 txtWinNo.textContent =0;
 	 flgRunning =false;
@@ -50,12 +63,18 @@ window.onload = function () {
 		display2_setup();
 	}
 
+	/* 当選番号表示エリアを待機中 */
+    textWinArea.className = "textWaiting";
 	/* ボタンのテキスト表示 */
 	btnStart.textContent = "スタート";
 	btnViewChg.textContent = "表示切替";
 	/* スタート時は全番号表示モード */
 	display1.style.display = "block";
 	display2.style.display = "none";
+
+	//ラジオボタンのセット
+	seMenu[0].checked = true ;
+
 }
 
 /*  ---------- ボタンクリック時のイベント処理 ---------- */
@@ -87,10 +106,16 @@ function clkViewChg() {
 }
 
 /*  ---------- 関数 ---------- */
-
 /* 抽選実行して待機状態にするための各種処理 */
 function toStandby() {
-
+	/* 効果音 */
+	seReset() ;
+	if ( seMenu[1].checked == true){
+		sound1_2.play();
+	} else if  (  seMenu[2].checked == true){
+		sound2_2.play();
+	}
+	
     /* シャッフルをとめる。止めた時点のnumBallが当選番号 */
     clearInterval(timer);
     
@@ -155,6 +180,14 @@ var display2_setup = function(){
 
 /* シャッフル中に変更 */
 function toRun() {
+	/* 効果音 */
+	seReset();
+	if (  seMenu[1].checked == true){
+		sound1_1.play();
+	} else if  (  seMenu[2].checked == true){
+		sound2_1.play();
+	}
+
 	/* 10ミリ秒ごとに残り時間を計算するタイマー処理 開始 */
 	timer = setInterval(shuffle, 10);
 	/* シャッフル中フラグをonに */
@@ -173,3 +206,24 @@ function shuffle() {
 	 txtWinNo.textContent = allBingoNumber[numBall] ;
 }
 
+/* 効果音リセット*/
+function seReset() {
+	sound1_1.pause();
+	sound1_1.currentTime = 0;
+	sound1_2.pause();
+	sound1_2.currentTime = 0;
+	sound2_1.pause();
+	sound2_1.currentTime = 0;
+	sound2_2.pause();
+	sound2_2.currentTime = 0;
+}
+/* 効果音呼び出し*/
+function audioLoad1() {
+	sound1_1.load();
+	sound1_2.load();
+}
+/* 効果音呼び出し*/
+function audioLoad2() {
+	sound2_1.load();
+	sound2_2.load();
+}

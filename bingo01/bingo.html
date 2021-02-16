@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61219057-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61219057-3');
+</script>
+
+
+
 		<meta charset="utf-8">
     	<!-- タイトル  -->
 		<title>シンプルでまあまあ使いやすいビンゴ。</title>
+		<meta name="description" content="みんなでわいわい楽しむビンゴ。無料！パーティー、忘年会、お誕生日会、打ち上げ、結婚式の2次会、歓迎会、歓送迎会など、多くの場面で使えるビンゴのブラウザアプリです！" />
+		<meta name="keywords" content="ビンゴ,BINGO,アプリ,無料,パーティー,忘年会,お誕生日会,打ち上げ,2次会" />
 
 		<!-- Javascriptとcssの呼び出し  -->
 		<script src="js/bingo_js.js"></script>
 		<link rel="stylesheet" href="css/bingo_css.css">    
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="/icon-128x128.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png">
+		
+
 	</head>
 
 	<body>
@@ -20,7 +40,7 @@
 			<h1>シンプルでまあまあ使いやすいビンゴ。</h1>
 			
 			<!-- 当選番号テキスト  -->
-			<div class="textWaiting" id="textWinArea">
+			<div id="textWinArea">
 				<span id="txtWinNo"></span>
 			</div>
 
@@ -28,8 +48,6 @@
 			<div>　</div>
 
 			<div>
-				<!-- 余白  -->
-				<p></p>
 				<!-- 抽選ボタン  -->
 				<button type="button" class="button1"  id="btnStart" onClick="clkStartStop()"></button>
 				<!-- 表示切替ボタン  -->
@@ -46,6 +64,59 @@
 				<ul id="numLog_dsp2" class="numLog"></ul>
 			</div>
 			
+			<!-- 余白  -->
+			<div>　</div>
+			
+			<form id="soundEffect" class="infomation">効果音<br>
+				<input name="se1" type="radio" value="0"> OFF　
+				<input name="se1" type="radio" value="1" onClick="audioLoad1()"> パターン1　
+				<input name="se1" type="radio" value="2" onClick="audioLoad2()"> パターン2　
+				<audio id="sound1_1" >
+					<source src="sound/sound1_1.mp3" type="audio/mp3">
+					<source src="sound/sound1_1.wav" type="audio/wav">
+					<p>このブラウザでは音声出ません</p>
+				</audio>
+				<audio id="sound1_2" >
+					<source src="sound/sound1_2.mp3" type="audio/mp3">
+					<source src="sound/sound1_2.wav" type="audio/wav">
+				</audio>
+				<audio id="sound2_1" > 
+					<source src="sound/sound2_1.mp3" type="audio/mp3">
+					<source src="sound/sound2_1.wav" type="audio/wav">
+				</audio>
+				<audio id="sound2_2" >
+					<source src="sound/sound2_2.mp3" type="audio/mp3">
+					<source src="sound/sound2_2.wav" type="audio/wav">
+				</audio>
+			</form>			
+			<!-- 余白  -->
+			<div>　</div>
+			
+
+<a href="https://rpx.a8.net/svt/ejp?a8mat=2HHY15+DLZSEY+2HOM+6IHCX&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eb4779e.5d30c5ba.0eb4779f.b871e4e3%2Fa15032332337_2HHY15_DLZSEY_2HOM_6IHCX%3Fpc%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F" target="_blank" rel="nofollow">
+<img src="http://hbb.afl.rakuten.co.jp/hsb/0ea7f9a8.a6e2608b.0ea7f99d.1ac92fca/153145/" border="0"></a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=2HHY15+DLZSEY+2HOM+6IHCX" alt="">
+
+<table cellpadding="0" cellspacing="0" border="0" style=" border:1px solid #ccc; width:300px;" align="center"><tr style="border-style:none;"><td style="vertical-align:top; border-style:none; padding:10px; width:44px;"><a href="https://rpx.a8.net/svt/ejp?a8mat=2HHY15+DLZSEY+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00psii4.2bo11096.g00psii4.2bo12776%2Fa15032332337_2HHY15_DLZSEY_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Ffestival-plaza%252F10003830%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Ffestival-plaza%252Fi%252F10003830%252F" target="_blank" rel="nofollow"><img border="0" alt="" src="http://thumbnail.image.rakuten.co.jp/@0_mall/festival-plaza/cabinet/chusen-goods/bingo200.jpg?_ex=64x64" /></a></td><td style="font-size:12px; vertical-align:middle; border-style:none; padding:10px;"><p style="padding:0; margin:0;"><a href="https://rpx.a8.net/svt/ejp?a8mat=2HHY15+DLZSEY+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00psii4.2bo11096.g00psii4.2bo12776%2Fa15032332337_2HHY15_DLZSEY_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Ffestival-plaza%252F10003830%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Ffestival-plaza%252Fi%252F10003830%252F" target="_blank" rel="nofollow">お徳用 ビンゴカード 200枚入り【ビンゴゲーム ビンゴ】{子供会 景品 お祭り くじ引き 縁日}</a></p><p style="color:#666; margin-top:5px line-height:1.5;">価格:<span style="font-size:14px; color:#C00; font-weight:bold;">420円</span><br/><span style="font-size:10px; font-weight:normal;">(2018/10/1 17:44時点)</span><br/><span style="font-weight:bold;">感想(51件)</span></p></td></tr></table>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=2HHY15+DLZSEY+2HOM+BWGDT" alt="">
+			<!-- 余白  -->
+			<div>　</div>
+			<div class="infomation2">
+				<h2>このサイトについて</h2>
+				<ul>
+					<li>シンプルでまあまあ使いやすい、ビンゴの無料アプリです。みんなでわいわい楽しんでください！</li>
+				</ul>
+				<h2>ビンゴの遊び方</h2>
+				<ul>
+					<li>「スタート」「ストップ」を押すと、ビンゴの番号を選びます。</li>
+					<li>「表示切替」を押すと、当選番号の表示方法が切り替わります。</li>
+					<li>「効果音」のボタンを押すと、スタート時・ストップ時の効果音が切り替わります。</li>
+					<li>はじめからビンゴをやり直したい時は、ブラウザを再読み込みしてください。</li>
+				</ul>
+			</div>
+			<div class="copyright"> &copy;&nbsp;シンプルでまあまあ使いやすいビンゴ。</div>
+
+
 		</div>
 	</body>
 </html>
